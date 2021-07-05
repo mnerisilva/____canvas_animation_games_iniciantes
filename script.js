@@ -26,7 +26,7 @@ function animate(){
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
     enemy2.x++;
     ctx.fillRect(enemy2.x, enemy2.y, enemy2.width, enemy2.height);
-    requestAnimationFrame(animate);
+    //requestAnimationFrame(animate);
 }
 
 /*document.addEventListener('keydown', function(event){
