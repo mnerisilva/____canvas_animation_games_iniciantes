@@ -20,11 +20,26 @@ class Enemy {
     }
 }
 
+let incremento;
+let limite = 250;
 const enemy2 = new Enemy();
+
+function incrementa(adiciona){
+    enemy2.x += adiciona;
+}
+
+function decrementa(subtrai){
+    enemy2.x -= subtrai;
+}
 
 function animate(){
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-    enemy2.x++;
+    //enemy2.x++;
+    incrementa(1);
+    if(enemy2.x == 25){
+        decrementa(-1);
+    }
+    console.log(enemy2.x)
     ctx.fillRect(enemy2.x, enemy2.y, enemy2.width, enemy2.height);
     //requestAnimationFrame(animate);
 }
